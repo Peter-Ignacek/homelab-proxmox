@@ -1,0 +1,47 @@
+﻿# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environment
+.env
+.env.*
+*.local
+
+# Secrets and credentials
+*secret*
+*secrets*
+*credential*
+*credentials*
+*token*
+*password*
+*passwd*
+*.key
+*.pem
+id_rsa
+id_ed25519
+known_hosts
+
+# Proxmox / backup sensitive exports
+proxmox-recon-*.md
+recon-*.md
+reports/
+backups/
+*.backup
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.qcow2
+*.raw
+*.vma
+*.vma.zst
+*.pxar
+*.blob
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
