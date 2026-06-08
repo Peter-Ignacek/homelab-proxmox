@@ -27,4 +27,8 @@ Polish Proxmox site.
 - Backrest
 - NetBox
 - Proxmox Backup Server PL
-- Clawbot Debian VM
+- OpenClaw / Clawbot Debian VM
+
+## Related documentation
+
+- [OpenClaw / Clawbot VM](../../docs/openclaw-clawbot.md)

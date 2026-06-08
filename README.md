@@ -35,6 +35,7 @@ This repo is intended as clean source material for Codex and future automation w
 - APT/no-subscription repository cleanup completed on both Proxmox nodes.
 - PVE-DE Hetzner Storage Box mount was migrated from a failed `/etc/fstab` mount to `systemd automount`. See [`docs/hetzner-storagebox-automount.md`](docs/hetzner-storagebox-automount.md).
 - PVE-PL LXC disk usage was checked; running containers are not critically full.
+- PVE-PL OpenClaw / Clawbot VM was documented. See [`docs/openclaw-clawbot.md`](docs/openclaw-clawbot.md).
 - NAS Plex share is at about 91% usage and requires manual media cleanup.
 
 ## Security note

@@ -45,3 +45,19 @@ backups/
 *.log
 *.tmp
 *.temp
+
+# OpenClaw / Clawbot local secrets and runtime data
+.openclaw/
+**/.openclaw/
+**/gateway-password
+**/*gateway-password*
+**/*anthropic*
+**/*telegram*token*
+**/*bot*token*
+**/*1password*
+**/*op-token*
+**/HEARTBEAT.md
+**/MEMORY.md
+**/SOUL.md
+**/USER.md
+**/IDENTITY.md

@@ -16,4 +16,4 @@ Main workloads:
 - Backup tooling via Duplicati / Backrest / PBS.
 - Media stack on PL: Plex, Tautulli, Overseerr, rclone.
 - Document stack on DE: Paperless-ngx, Filebrowser, Duplicati.
-- Lab/dev services: devops-lab-de, Clawbot, NetBox.
+- Lab/dev services: devops-lab-de, OpenClaw / Clawbot, NetBox.
