@@ -12,9 +12,9 @@ Intel NUC10i7FNH, Intel Core i7-10710U, 16 GB RAM, Debian trixie, Proxmox VE 9.2
 
 ## Guests
 
-- VMs: 2
+- VMs: 3
 - LXC containers: 8
-- Verified running: VM 100, VM 901, CT 101-108
+- Verified running: VM 100, VM 501, VM 901, CT 101-108
 
 See:
 

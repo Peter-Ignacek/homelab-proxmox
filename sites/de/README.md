@@ -25,7 +25,12 @@ German Proxmox site.
 - Duplicati / Backrest / Filebrowser backup tooling
 - PBS-DE VM
 - DevOps lab LXC
+- Hermes Agent VM
 
 ## Upgrade reports
 
 - [PVE-DE Upgrade Report - Proxmox VE 8 to 9](../../docs/upgrades/pve-de-pve9-upgrade-2026-06-09.md)
+
+## Related documentation
+
+- [Hermes Agent VM](../../docs/hermes-agent-pve-de.md)

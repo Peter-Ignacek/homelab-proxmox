@@ -61,3 +61,11 @@ backups/
 **/SOUL.md
 **/USER.md
 **/IDENTITY.md
+
+# Hermes Agent local secrets and runtime data
+.hermes/
+**/.hermes/
+**/hermes-gateway*.log
+**/hermes*/sessions/
+**/hermes*/logs/
+**/hermes*/state.db

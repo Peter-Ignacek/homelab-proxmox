@@ -5,7 +5,7 @@ The homelab consists of two independent single-node Proxmox VE installations con
 - `PVE-DE`: German site, Intel NUC based, LAN `192.168.178.0/24`.
 - `PVE-PL`: Polish site, GEEKOM GT1 Mega based, LAN `192.168.1.0/24`.
 
-Both nodes are standalone Proxmox nodes, not members of a Proxmox cluster. Both are running Proxmox VE 8.4 on Debian 12 Bookworm with the no-subscription repository enabled.
+Both nodes are standalone Proxmox nodes, not members of a Proxmox cluster. PVE-DE is documented after its Proxmox VE 9 upgrade; PVE-PL has separate site documentation for its current state.
 
 Main workloads:
 
@@ -16,4 +16,4 @@ Main workloads:
 - Backup tooling via Duplicati / Backrest / PBS.
 - Media stack on PL: Plex, Tautulli, Overseerr, rclone.
 - Document stack on DE: Paperless-ngx, Filebrowser, Duplicati.
-- Lab/dev services: devops-lab-de, OpenClaw / Clawbot, NetBox.
+- Lab/dev services: devops-lab-de, Hermes Agent on PVE-DE, OpenClaw / Clawbot on PVE-PL, NetBox.
