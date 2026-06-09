@@ -19,6 +19,13 @@ The enterprise repository is disabled for this no-subscription homelab setup. An
 
 `apt update` completed without 401 Unauthorized and reported all packages up to date after the cleanup.
 
+
+## PVE-PL after Proxmox VE 9 upgrade
+
+PVE-PL was upgraded to Proxmox VE 9.2.3 on 2026-06-09. The host now uses Debian trixie and the Proxmox VE 9 no-subscription repository. The enterprise repository is disabled because no paid Proxmox subscription is used. The old Ceph Quincy repository is disabled because Ceph is not used on PVE-PL.
+
+`apt update` completed cleanly and reported all packages up to date.
+
 ## PVE-PL state after 2026-06-08 cleanup
 
 PVE-PL was cleaned up on 2026-06-08. The Proxmox repository line no longer contains the invalid Debian component `non-free`.

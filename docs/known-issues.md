@@ -25,3 +25,11 @@
 - NFS Plex mount shows high NAS usage around 91%. Main consumers found: `Movies` around 8 TB and `TV` around 3.1 TB. Cleanup is content/manual, not a Proxmox issue.
 - Windows VM `102 Winda` is stopped.
 - CT108 `debian` is a stopped test container.
+
+## PVE-PL post Proxmox VE 9 follow-up
+
+- Do not run `apt autoremove` immediately after the 2026-06-09 upgrade. Keep old 6.8 kernels for a few days as rollback fallback; reminder starts from 2026-06-16.
+- VM 102 `Winda` remains stopped with `onboot=0`. Check BitLocker before considering `qm enroll-efi-keys 102` for EFI 2023 certificates.
+- `pve8to9` reported cgroup warnings for some running CTs after services were started. There were no FAILURES, and CT services/mounts validated OK. Treat this as an observation.
+- `pve8to9` found 18 old-format RRD files used only for historical data. Leave them for now; cleanup is optional later if historical metrics are not needed.
+- LVM autoactivation notice for `local-lvm` is informational and does not require immediate action.

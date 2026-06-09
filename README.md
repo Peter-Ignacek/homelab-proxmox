@@ -33,6 +33,7 @@ This repo is intended as clean source material for Codex and future automation w
 ## Recent cleanup notes
 
 - PVE-DE was upgraded from Proxmox VE 8.4.19 to 9.2.3 on 2026-06-09. See [docs/upgrades/pve-de-pve9-upgrade-2026-06-09.md](docs/upgrades/pve-de-pve9-upgrade-2026-06-09.md).
+- PVE-PL was upgraded to Proxmox VE 9.2.3 on 2026-06-09. See [docs/upgrades/pve-pl-pve9-upgrade-2026-06-09.md](docs/upgrades/pve-pl-pve9-upgrade-2026-06-09.md).
 - APT/no-subscription repository cleanup completed on both Proxmox nodes.
 - PVE-DE Hetzner Storage Box mount was migrated from a failed `/etc/fstab` mount to `systemd automount`. See [`docs/hetzner-storagebox-automount.md`](docs/hetzner-storagebox-automount.md).
 - PVE-PL LXC disk usage was checked; running containers are not critically full.

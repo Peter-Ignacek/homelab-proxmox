@@ -9,3 +9,7 @@
 Additional mounts:
 
 - `/mnt/nfs-plex` NFS mount to NAS path `192.168.1.100:/volume1/Plex`.
+
+Backup note:
+
+- Host configuration backup before the Proxmox VE 9 upgrade was stored locally and on the NAS. Do not commit the archive because it can contain sensitive host configuration such as WireGuard files.
