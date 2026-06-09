@@ -33,7 +33,7 @@ Current Hetzner Storage Box state:
 - The old failed `/etc/fstab` mount was disabled.
 - Hetzner Storage Box is now mounted on demand via `systemd automount`.
 - Host mountpoint: `/mnt/hetzner`.
-- Remote path: `u485957@u485957.your-storagebox.de:/home/home/sub`.
+- Remote path: `<HETZNER_STORAGEBOX_USER>@<HETZNER_STORAGEBOX_HOST>:/<REMOTE_PATH>`.
 - CT106 Filebrowser bind mount remains `mp1: /mnt/hetzner,mp=/mnt/hetzner`.
 
 Known observation from report:

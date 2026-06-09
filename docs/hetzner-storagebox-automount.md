@@ -17,13 +17,13 @@ The chosen solution is `systemd automount`:
 The old path was wrong/empty:
 
 ```text
-u485957@u485957.your-storagebox.de:/home/sub
+<HETZNER_STORAGEBOX_USER>@<HETZNER_STORAGEBOX_HOST>:/<REMOTE_PATH>
 ```
 
 The correct active path is:
 
 ```text
-u485957@u485957.your-storagebox.de:/home/home/sub
+<HETZNER_STORAGEBOX_USER>@<HETZNER_STORAGEBOX_HOST>:/<REMOTE_PATH>
 ```
 
 Observed contents after correction:
@@ -74,7 +74,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Mount]
-What=u485957@u485957.your-storagebox.de:/home/home/sub
+What=<HETZNER_STORAGEBOX_USER>@<HETZNER_STORAGEBOX_HOST>:/<REMOTE_PATH>
 Where=/mnt/hetzner
 Type=fuse.sshfs
 Options=_netdev,allow_other,uid=100000,gid=100000,default_permissions,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,port=23,IdentityFile=/root/.ssh/hetzner_storagebox

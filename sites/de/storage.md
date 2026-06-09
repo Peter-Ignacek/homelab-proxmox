@@ -11,4 +11,4 @@ Additional mounts:
 
 - `/mnt/duplicati-local` on local 2 TB disk.
 - `/mnt/ugreen` CIFS mount to NAS share `//192.168.1.100/proxmox-DE`.
-- `/mnt/hetzner` is mounted on demand via systemd automount to Hetzner Storage Box path `u485957@u485957.your-storagebox.de:/home/home/sub`. See `../../docs/hetzner-storagebox-automount.md`.
+- `/mnt/hetzner` is mounted on demand via systemd automount to Hetzner Storage Box path `<HETZNER_STORAGEBOX_USER>@<HETZNER_STORAGEBOX_HOST>:/<REMOTE_PATH>`. See `../../docs/hetzner-storagebox-automount.md`.
