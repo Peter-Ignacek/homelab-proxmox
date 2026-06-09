@@ -1,12 +1,29 @@
 # Proxmox subscription and repositories
 
-Both nodes use the Proxmox no-subscription repository. Enterprise repositories are present but commented out.
+Both nodes use the Proxmox no-subscription repository. Enterprise repositories are disabled/commented out because no paid Proxmox subscription is used.
 
-## Current state after cleanup
+## PVE-DE after Proxmox VE 9 upgrade
 
-Both nodes were cleaned up on 2026-06-08. The Proxmox repository line no longer contains the invalid Debian component `non-free`.
+PVE-DE was upgraded to Proxmox VE 9.2.3 on 2026-06-09. The host now uses the Proxmox VE 9 no-subscription repository in deb822 format:
 
-Clean Proxmox VE repository line on both nodes:
+```text
+# /etc/apt/sources.list.d/proxmox.sources
+Types: deb
+URIs: http://download.proxmox.com/debian/pve
+Suites: trixie
+Components: pve-no-subscription
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+```
+
+The enterprise repository is disabled for this no-subscription homelab setup. Any old enterprise source such as `pve-enterprise.list` or `pve-enterprise.sources` should remain disabled.
+
+`apt update` completed without 401 Unauthorized and reported all packages up to date after the cleanup.
+
+## PVE-PL state after 2026-06-08 cleanup
+
+PVE-PL was cleaned up on 2026-06-08. The Proxmox repository line no longer contains the invalid Debian component `non-free`.
+
+Clean Proxmox VE repository line:
 
 ```text
 deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
@@ -30,7 +47,7 @@ Debian Bookworm repository components were also cleaned up to include `non-free-
 contrib non-free non-free-firmware main
 ```
 
-`apt update` completed cleanly on both nodes after the change.
+`apt update` completed cleanly after the change.
 
 ## Helper scripts
 

@@ -8,10 +8,10 @@ German Proxmox site.
 - Hardware: Intel NUC10i7FNH
 - CPU: Intel Core i7-10710U, 6 cores / 12 threads
 - RAM: 16 GB
-- OS: Debian GNU/Linux 12 Bookworm
-- Proxmox VE: 8.4.0
-- pve-manager: 8.4.19
-- Kernel: 6.8.12-29-pve
+- OS: Debian trixie
+- Proxmox VE: 9.2.3
+- pve-manager: 9.2.3
+- Kernel: 7.0.6-2-pve
 - Main LAN IP: `192.168.178.71/24`
 - Default gateway: `192.168.178.1`
 - WireGuard: `10.50.50.2/24`
@@ -25,3 +25,7 @@ German Proxmox site.
 - Duplicati / Backrest / Filebrowser backup tooling
 - PBS-DE VM
 - DevOps lab LXC
+
+## Upgrade reports
+
+- [PVE-DE Upgrade Report - Proxmox VE 8 to 9](../../docs/upgrades/pve-de-pve9-upgrade-2026-06-09.md)
