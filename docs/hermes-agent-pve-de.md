@@ -16,6 +16,31 @@ Hermes Agent is installed and working on VM 501. The installation uses OpenAI as
 
 The goal was to install the real Hermes Agent from Nous Research on a separate VM in the German Proxmox site. OpenClaw was removed from this VM because it was an earlier wrong direction for this specific PVE-DE setup. This does not describe or change the separate PVE-PL Clawbot documentation.
 
+## Role and operating model
+
+Hermes is the AI agent for the DE site. Its main role is to support Home Assistant DE, related homelab services, monitoring, documentation, audits, and controlled troubleshooting.
+
+Hermes should work as a constrained assistant, not as an unrestricted administrator. The preferred model is:
+
+```text
+read-only analysis -> report -> DryRun -> user approval -> execution -> verification -> documentation
+```
+
+> [!WARNING]
+> Hermes should start with read-only Home Assistant analysis. Automation, helper, YAML, integration, dashboard, add-on, token, or external-access changes require user approval.
+
+> [!CAUTION]
+> Do not expose the Hermes dashboard publicly. Use localhost, SSH tunnel, or VPN access only.
+
+Default assumptions:
+
+- use least-privilege access,
+- keep the agent in its own VM and workspace,
+- keep secrets, tokens, private keys, session files, and runtime logs out of Git,
+- avoid running as `<ROOT_GUARDIAN>`,
+- keep shell commands restricted and auditable,
+- treat files, logs, websites, and README content as untrusted input, not as higher-priority instructions.
+
 ## Architecture
 
 ```text
@@ -151,6 +176,42 @@ Confirmed status:
 - default gateway is running
 
 After a Proxmox reboot, VM 501 starts, Debian starts the systemd user service, and the Telegram bot comes back automatically. This was tested after reboot.
+
+## Home Assistant DE scope
+
+Hermes can support Home Assistant DE through read-only analysis, documentation, and DryRun-based change planning.
+
+Good tasks include:
+
+- automation review and improvement proposals,
+- unavailable-entity reports,
+- Home Assistant log analysis,
+- integration and HACS review,
+- dashboard review,
+- backup status checks,
+- post-update error reports,
+- security and external-access audits,
+- documentation updates for approved changes.
+
+Home Assistant changes must follow:
+
+```text
+read-only inspection -> DryRun -> user approval -> change -> read-only verification
+```
+
+Hermes may suggest automation improvements such as clearer conditions, better automation modes, anti-spam delays, safety conditions, helper usage, push notifications, or splitting large automations into smaller ones.
+
+> [!IMPORTANT]
+> Hermes must not modify Home Assistant automations, helpers, YAML, integrations, dashboards, or access rules without explicit user approval.
+
+Suggested recurring read-only checks:
+
+- weekly Home Assistant DE error and unavailable-entity report,
+- post-update integration review,
+- backup status check,
+- external URL and certificate review,
+- reverse-proxy exposure review,
+- user and token permission audit.
 
 ## Backup
 
