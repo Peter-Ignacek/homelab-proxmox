@@ -25,7 +25,7 @@ keep-daily=7, keep-weekly=4, keep-monthly=1
 Additional host config backup cron:
 
 ```text
-30 1 * * * /bin/bash -lc 'cd /root/pve-config-backup && ./backup-pve.sh' >> /var/log/pve-config-backup.log 2>&1
+30 1 * * * /bin/bash -lc 'cd /<ROOT_GUARDIAN>/pve-config-backup && ./backup-pve.sh' >> /var/log/pve-config-backup.log 2>&1
 ```
 
 Current Hetzner Storage Box state:

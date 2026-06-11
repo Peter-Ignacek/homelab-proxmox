@@ -17,7 +17,7 @@ The LLM backend uses Anthropic API. There is no local Ollama or GPU requirement.
 | Proxmox host | `PVE-PL` |
 | VM name | `clawbot` |
 | Guest OS | Debian 13 / Trixie |
-| User | `xxxxxxxxxxxxxx` |
+| User | `<HOMELAB_JEDI>` |
 | VM IP | `192.168.1.71` |
 | SSH access | Windows SSH config alias `clawbot` |
 
@@ -67,12 +67,12 @@ OpenClaw 2026.6.1
 
 ## OpenClaw Gateway
 
-The gateway runs as a systemd user service for user `piotr`.
+The gateway runs as a systemd user service for user `<HOMELAB_JEDI>`.
 
 Service file:
 
 ```text
-/home/piotr/.config/systemd/user/openclaw-gateway.service
+/home/<HOMELAB_JEDI>/.config/systemd/user/openclaw-gateway.service
 ```
 
 Port:
@@ -90,7 +90,7 @@ lan
 Service command:
 
 ```bash
-/usr/bin/openclaw gateway run --bind lan --auth password --password-file /home/piotr/.openclaw/gateway-password --port 18789 --force
+/usr/bin/openclaw gateway run --bind lan --auth password --password-file /home/<HOMELAB_JEDI>/.openclaw/gateway-password --port 18789 --force
 ```
 
 Do not commit the password file or its contents.
@@ -204,10 +204,10 @@ Clawbot
 Persona files on the VM:
 
 ```text
-/home/piotr/.openclaw/workspace/IDENTITY.md
-/home/piotr/.openclaw/workspace/USER.md
-/home/piotr/.openclaw/workspace/SOUL.md
-/home/piotr/.openclaw/workspace/MEMORY.md
+/home/<HOMELAB_JEDI>/.openclaw/workspace/IDENTITY.md
+/home/<HOMELAB_JEDI>/.openclaw/workspace/USER.md
+/home/<HOMELAB_JEDI>/.openclaw/workspace/SOUL.md
+/home/<HOMELAB_JEDI>/.openclaw/workspace/MEMORY.md
 ```
 
 Persona summary:
@@ -223,7 +223,7 @@ Safety rules:
 2. Wait for user approval.
 3. Execute only after approval.
 4. Do not delete files without asking.
-5. Do not use root without explicit approval.
+5. Do not use <ROOT_GUARDIAN> without explicit approval.
 6. Do not touch passwords, tokens, or 1Password without asking.
 7. For Home Assistant, Proxmox, Docker, and GitHub, prepare a dry run first.
 

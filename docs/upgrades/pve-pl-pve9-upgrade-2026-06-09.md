@@ -54,7 +54,7 @@ VM 900 `pbs-pl` was intentionally not backed up to the same PBS storage to avoid
 A host configuration backup was also created:
 
 ```text
-/root/pve-pl-host-config-before-pve9-2026-06-09-1436.tar.gz
+/<ROOT_GUARDIAN>/pve-pl-host-config-before-pve9-2026-06-09-1436.tar.gz
 /mnt/nfs-plex/_proxmox-host-backups/pve-pl/pve-pl-host-config-before-pve9-2026-06-09-1436.tar.gz
 ```
 

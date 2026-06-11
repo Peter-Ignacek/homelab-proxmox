@@ -3,7 +3,7 @@ set -euo pipefail
 
 HOST="$(hostname)"
 DATE="$(date +%F_%H-%M-%S)"
-OUT="/root/proxmox-recon-${HOST}-${DATE}.md"
+OUT="/<ROOT_GUARDIAN>/proxmox-recon-${HOST}-${DATE}.md"
 
 section() {
   echo
@@ -113,14 +113,14 @@ cmd ls -la /etc/cron.d
 cmd systemctl list-timers --all
 
 section "Helper Scripts / Shell History Hints"
-cmd grep -RiE "tteck|community-scripts|post-pve|no-subscription|pve-no-subscription|enterprise|nag|helper" /root /etc/apt /etc/pve 2>/dev/null
+cmd grep -RiE "tteck|community-scripts|post-pve|no-subscription|pve-no-subscription|enterprise|nag|helper" /<ROOT_GUARDIAN> /etc/apt /etc/pve 2>/dev/null
 
 section "Installed Packages - Relevant"
 cmd dpkg -l | grep -Ei "proxmox|pve-|qemu|lxc|zfs|ceph|tailscale|wireguard|rclone|duplicati|pbs|backup|smart|lm-sensors|iotop|iftop|htop"
 
 section "Redaction Notes"
 echo "- Before publishing to GitHub, check this report for public IPs, hostnames, serial numbers, MAC addresses, tokens, passwords, WireGuard keys, API keys."
-echo "- Do not commit private keys from /etc/pve/priv, /etc/ssh, /root, backup credentials, or cloud credentials."
+echo "- Do not commit private keys from /etc/pve/priv, /etc/ssh, /<ROOT_GUARDIAN>, backup credentials, or cloud credentials."
 
 } > "$OUT"
 

@@ -22,7 +22,7 @@ The goal was to install the real Hermes Agent from Nous Research on a separate V
 PVE-DE
 +- VM 501 hermes
    +- Debian 13 Trixie
-   +- SSH + sudo for user piotr
+   +- SSH + sudo for user <HOMELAB_JEDI>
    +- qemu-guest-agent
    +- Hermes Agent v0.16.0
    |  +- provider: openai-api
@@ -49,14 +49,14 @@ PVE-DE
 | VM ID | 501 |
 | Name | hermes |
 | OS | Debian 13 Trixie |
-| User | piotr |
+| User | <HOMELAB_JEDI> |
 | SSH alias | hermes |
 | qemu-guest-agent | active/running |
 | Node.js / npm | installed earlier; not critical for basic Hermes Agent operation |
 
 ## Installation
 
-The installer was run on VM `hermes` as user `piotr`:
+The installer was run on VM `hermes` as user `<HOMELAB_JEDI>`:
 
 ```bash
 curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
@@ -86,9 +86,9 @@ hermes doctor
 
 Confirmed results:
 
-- `/home/piotr/.local/bin/hermes`
+- `/home/<HOMELAB_JEDI>/.local/bin/hermes`
 - Hermes Agent v0.16.0 (2026.6.5)
-- Project path: `/home/piotr/.hermes/hermes-agent`
+- Project path: `/home/<HOMELAB_JEDI>/.hermes/hermes-agent`
 - Python: 3.11.15
 - Hermes doctor confirmed OpenAI SDK, `config.yaml`, `.env`, browser automation, Playwright Chromium, web tool, image generation, memory, skills, and cronjob.
 
@@ -185,13 +185,13 @@ ssh -L 9119:127.0.0.1:9119 hermes
 ## Files And Directories
 
 ```text
-/home/piotr/.hermes/config.yaml
-/home/piotr/.hermes/.env              # do not commit
-/home/piotr/.hermes/skills/
-/home/piotr/.hermes/memories/
-/home/piotr/.hermes/sessions/
-/home/piotr/.hermes/logs/
-/home/piotr/.config/systemd/user/hermes-gateway.service
+/home/<HOMELAB_JEDI>/.hermes/config.yaml
+/home/<HOMELAB_JEDI>/.hermes/.env              # do not commit
+/home/<HOMELAB_JEDI>/.hermes/skills/
+/home/<HOMELAB_JEDI>/.hermes/memories/
+/home/<HOMELAB_JEDI>/.hermes/sessions/
+/home/<HOMELAB_JEDI>/.hermes/logs/
+/home/<HOMELAB_JEDI>/.config/systemd/user/hermes-gateway.service
 ```
 
 ## Follow-Up

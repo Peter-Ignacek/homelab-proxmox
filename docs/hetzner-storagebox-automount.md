@@ -38,7 +38,7 @@ Sicherungsaufgabe1_20260607_194908810.ubk
 Authentication uses the SSH key on PVE-DE:
 
 ```text
-/root/.ssh/hetzner_storagebox
+/<ROOT_GUARDIAN>/.ssh/hetzner_storagebox
 ```
 
 The private key must not be committed to GitHub or Notion.
@@ -77,7 +77,7 @@ After=network-online.target
 What=<HETZNER_STORAGEBOX_USER>@<HETZNER_STORAGEBOX_HOST>:/<REMOTE_PATH>
 Where=/mnt/hetzner
 Type=fuse.sshfs
-Options=_netdev,allow_other,uid=100000,gid=100000,default_permissions,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,port=23,IdentityFile=/root/.ssh/hetzner_storagebox
+Options=_netdev,allow_other,uid=100000,gid=100000,default_permissions,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,port=23,IdentityFile=/<ROOT_GUARDIAN>/.ssh/hetzner_storagebox
 
 [Install]
 WantedBy=multi-user.target
