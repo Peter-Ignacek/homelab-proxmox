@@ -109,59 +109,29 @@ Expected listener:
 0.0.0.0:18789
 ```
 
-## Reverse proxy / HTTPS
+## SSH tunnel access
 
-Dashboard URL:
+The reverse proxy / HTTPS access path was removed.
 
-```text
-https://openclaw.pl.ignacek.com
+Dashboard access is only through an SSH tunnel.
+
+Start the tunnel from the client:
+
+```bash
+ssh -L 18789:127.0.0.1:18789 clawbot
 ```
 
-Nginx Proxy Manager proxy host:
+Then open the dashboard locally:
 
-| Setting | Value |
-|---|---|
-| Scheme | `http` |
-| Forward hostname / IP | `192.168.1.71` |
-| Forward port | `18789` |
-| Websockets support | ON |
-| Block common exploits | ON |
-| Cache assets | OFF |
-| Force SSL | ON |
-| HTTP/2 support | ON |
-
-The NPM Access List with Basic Auth was disabled because it can break WebSocket traffic.
+```text
+http://127.0.0.1:18789
+```
 
 Security is handled by:
 
-1. HTTPS
+1. SSH access to the VM
 2. OpenClaw Gateway password
 3. Device pairing
-
-## OpenClaw reverse proxy config
-
-Allowed origins and trusted proxies were added to OpenClaw config:
-
-```json
-{
-  "gateway": {
-    "controlUi": {
-      "allowedOrigins": [
-        "https://openclaw.pl.ignacek.com",
-        "http://localhost:18789",
-        "http://127.0.0.1:18789"
-      ]
-    },
-    "trustedProxies": [
-      "192.168.1.58",
-      "127.0.0.1",
-      "::1"
-    ]
-  }
-}
-```
-
-`192.168.1.58` is the Nginx Proxy Manager IP as seen by OpenClaw.
 
 ## Device pairing
 
@@ -316,9 +286,10 @@ openclaw gateway usage-cost --password "$(cat ~/.openclaw/gateway-password)"
 - SSH works.
 - Docker works.
 - OpenClaw works.
-- Dashboard works over HTTPS.
-- Nginx Proxy Manager works.
-- WebSocket works.
+- Dashboard works through SSH tunnel only.
+- Reverse proxy / HTTPS access was removed.
+- Nginx Proxy Manager is not used for OpenClaw.
+- WebSocket works through the SSH tunnel.
 - Device pairing works.
 - Telegram bot works.
 - Clawbot persona is saved.
