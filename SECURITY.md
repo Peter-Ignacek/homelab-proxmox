@@ -10,7 +10,7 @@ Do not commit:
 - Proxmox Backup Server tokens or passwords
 - Duplicati passwords / passphrases
 - NPM Cloudflare or DNS API tokens
-- Paperless secret keys or admin passwords
+- Paperless secret keys or <ADMIN_WIZARD> passwords
 - Filebrowser or Backrest credentials
 - NAS credentials or CIFS credential files
 - Full SMART serial numbers if the repo is public
