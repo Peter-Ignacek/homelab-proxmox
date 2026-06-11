@@ -26,7 +26,7 @@ Example SSH config entry:
 ```text
 Host clawbot
     HostName 192.168.1.71
-    User piotr
+    User xxxxxxx
     Port 22
 ```
 
