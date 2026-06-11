@@ -17,7 +17,7 @@ The LLM backend uses Anthropic API. There is no local Ollama or GPU requirement.
 | Proxmox host | `PVE-PL` |
 | VM name | `clawbot` |
 | Guest OS | Debian 13 / Trixie |
-| User | `piotr` |
+| User | `xxxxxxxxxxxxxx` |
 | VM IP | `192.168.1.71` |
 | SSH access | Windows SSH config alias `clawbot` |
 
