@@ -1,4 +1,4 @@
-# PVE-PL hardware
+﻿# PVE-PL hardware
 
 | Component | Value |
 |---|---|
@@ -12,4 +12,4 @@
 ## Storage devices
 
 - 1 TB NVMe contains Proxmox OS, root filesystem and `local-lvm`.
-- NFS mount `/mnt/nfs-plex` points to NAS path `192.168.1.100:/volume1/Plex`.
+- NFS mount `/mnt/nfs-plex` points to NAS path `<PRIVATE_IP>:/volume1/Plex`.
