@@ -1,4 +1,4 @@
-# PVE-PL storage
+﻿# PVE-PL storage
 
 | Storage | Type | Purpose | Notes |
 |---|---|---|---|
@@ -8,7 +8,7 @@
 
 Additional mounts:
 
-- `/mnt/nfs-plex` NFS mount to NAS path `192.168.1.100:/volume1/Plex`.
+- `/mnt/nfs-plex` NFS mount to NAS path `<PRIVATE_IP>:/volume1/Plex`.
 
 Backup note:
 
