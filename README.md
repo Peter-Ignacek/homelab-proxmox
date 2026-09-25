@@ -6,7 +6,7 @@ Documentation and inventory for the two-site Proxmox homelab.
 
 | Site | Host role | Hardware | Main IP | Proxmox | Notes |
 |---|---|---|---|---|---|
-| `de` | PVE-DE | Intel NUC10i7FNH, i7-10710U, 16 GB RAM | 192.168.178.71 | 9.2.3 / pve-manager 9.2.3 | Home Assistant, Paperless, Invoice Ninja, Stirling PDF, DocuSeal, NPM, Duplicati, PBS-DE |
+| `de` | PVE-DE | Intel NUC10i7FNH, i7-10710U, 16 GB RAM | 192.168.178.71 | 9.2.3 / pve-manager 9.2.3 | Home Assistant, Paperless, AdGuard, NPM, Invoice Ninja, Stirling PDF, DocuSeal, Duplicati, PBS-DE |
 | `pl` | PVE-PL | GEEKOM GT1 Mega, Core Ultra 7 155H, 32 GB RAM | 192.168.1.250 | 8.4.0 / pve-manager 8.4.19 | Home Assistant, Plex stack, PBS-PL, NetBox, Clawbot |
 
 ## Network overview
@@ -34,6 +34,11 @@ This repo is intended as clean source material for Codex and future automation w
 - [Invoice Ninja](docs/services/invoice-ninja.md) — self-hosted invoicing and business administration.
 - [Stirling PDF](docs/services/stirling-pdf.md) — self-hosted PDF processing.
 - [DocuSeal](docs/services/docuseal.md) — self-hosted document signing.
+- [Paperless-ngx](docs/services/paperless-ngx.md) — self-hosted document management.
+- [Nginx Proxy Manager](docs/services/nginx-proxy-manager.md) — reverse proxy and HTTPS entry layer.
+- [AdGuard Home](docs/services/adguard-home.md) — site-local DNS filtering.
+- [Duplicati](docs/services/duplicati.md) — encrypted multi-destination application/data backups.
+- [Proxmox Backup Server](docs/services/proxmox-backup-server.md) — daily selected VM/LXC backups across the two sites.
 
 
 ## Recent cleanup notes

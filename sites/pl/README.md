@@ -23,6 +23,7 @@ Polish Proxmox site.
 - Plex media stack
 - Rclone sync container
 - Nginx Proxy Manager
+- AdGuard Home
 - Uptime Kuma
 - Backrest
 - NetBox

@@ -10,6 +10,11 @@
 | 106 | `filebrowser` | running | 1 | 512 MB | 4 GB | `vmbr0` | yes | File browser |
 | 107 | `backrest` | running | 1 | 512 MB | 8 GB | `vmbr0` | yes | Restic/Backrest backup |
 | 108 | `devops-lab-de` | running | 2 | 2048 MB | 16 GB | `vmbr0` | yes | DevOps lab |
+| 109 | `jellyfin` | running | TBD | TBD | TBD | `vmbr0` | yes | Jellyfin media server |
+| 110 | `web-social-reporting` | running | TBD | TBD | TBD | `vmbr0` | yes | Web Social Reporting |
+| 111 | `stirling-pdf` | running | TBD | TBD | TBD | `vmbr0` | yes | PDF processing |
+| 112 | `invoice-ninja` | running | TBD | TBD | TBD | `vmbr0` | yes | Invoicing and business administration |
+| 113 | `docuseal` | running | TBD | TBD | TBD | `vmbr0` | yes | Document signing |
 
 Important bind mounts:
 

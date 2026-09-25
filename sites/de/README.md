@@ -28,6 +28,14 @@ German Proxmox site.
 - DevOps lab LXC
 - Hermes Agent VM
 
+Service documentation:
+
+- [Paperless-ngx](../../docs/services/paperless-ngx.md)
+- [Nginx Proxy Manager](../../docs/services/nginx-proxy-manager.md)
+- [AdGuard Home](../../docs/services/adguard-home.md)
+- [Duplicati](../../docs/services/duplicati.md)
+- [Proxmox Backup Server](../../docs/services/proxmox-backup-server.md)
+
 ## Upgrade reports
 
 - [PVE-DE Upgrade Report - Proxmox VE 8 to 9](../../docs/upgrades/pve-de-pve9-upgrade-2026-06-09.md)
