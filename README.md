@@ -6,7 +6,7 @@ Documentation and inventory for the two-site Proxmox homelab.
 
 | Site | Host role | Hardware | Main IP | Proxmox | Notes |
 |---|---|---|---|---|---|
-| `de` | PVE-DE | Intel NUC10i7FNH, i7-10710U, 16 GB RAM | 192.168.178.71 | 9.2.3 / pve-manager 9.2.3 | Home Assistant, Paperless, NPM, Duplicati, PBS-DE |
+| `de` | PVE-DE | Intel NUC10i7FNH, i7-10710U, 16 GB RAM | 192.168.178.71 | 9.2.3 / pve-manager 9.2.3 | Home Assistant, Paperless, Invoice Ninja, Stirling PDF, DocuSeal, NPM, Duplicati, PBS-DE |
 | `pl` | PVE-PL | GEEKOM GT1 Mega, Core Ultra 7 155H, 32 GB RAM | 192.168.1.250 | 8.4.0 / pve-manager 8.4.19 | Home Assistant, Plex stack, PBS-PL, NetBox, Clawbot |
 
 ## Network overview
@@ -29,6 +29,12 @@ This repo is intended as clean source material for Codex and future automation w
 - Known issues and cleanup tasks
 - Installed helper-script origins
 
+## PVE-DE service inventory
+
+- [Invoice Ninja](docs/services/invoice-ninja.md) — self-hosted invoicing and business administration.
+- [Stirling PDF](docs/services/stirling-pdf.md) — self-hosted PDF processing.
+- [DocuSeal](docs/services/docuseal.md) — self-hosted document signing.
+
 
 ## Recent cleanup notes
 
@@ -39,6 +45,7 @@ This repo is intended as clean source material for Codex and future automation w
 - PVE-DE Hetzner Storage Box mount was migrated from a failed `/etc/fstab` mount to `systemd automount`. See [`docs/hetzner-storagebox-automount.md`](docs/hetzner-storagebox-automount.md).
 - PVE-PL LXC disk usage was checked; running containers are not critically full.
 - PVE-PL OpenClaw / Clawbot VM was documented. See [`docs/openclaw-clawbot.md`](docs/openclaw-clawbot.md).
+- Three additional PVE-DE services were documented: [Invoice Ninja](docs/services/invoice-ninja.md), [Stirling PDF](docs/services/stirling-pdf.md), and [DocuSeal](docs/services/docuseal.md).
 - NAS Plex share is at about 91% usage and requires manual media cleanup.
 
 ## Security note

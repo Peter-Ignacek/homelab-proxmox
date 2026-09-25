@@ -22,6 +22,7 @@ German Proxmox site.
 - DNS filtering via AdGuard
 - Reverse proxy via Nginx Proxy Manager
 - Paperless-ngx document management
+- Invoice Ninja, Stirling PDF, and DocuSeal business/document services
 - Duplicati / Backrest / Filebrowser backup tooling
 - PBS-DE VM
 - DevOps lab LXC
